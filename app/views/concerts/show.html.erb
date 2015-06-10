@@ -1,0 +1,50 @@
+<!-- Responsive panel example-->
+
+<div class="row">
+  <div class="col-sm-offset-1 col-sm-10 col-md-offset-2 col-md-8">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">Review #<%= @concert.id %></h3>
+      </div>
+      <div class="panel-body">
+        <div class="row">
+          <div class="col-md-12">
+            <dl class="dl-horizontal">
+              <dt>Artist</dt>
+              <dd><%= @concert.artist %></dd>
+
+              <dt>Music genre</dt>
+              <dd><%= @concert.music_genre %></dd>
+
+              <dt>City</dt>
+              <dd><%= @concert.city %></dd>
+
+              <dt>Date</dt>
+              <dd><%= @concert.date %></dd>
+
+              <dt>Comments</dt>
+              <dd><%= @concert.venue %></dd>
+
+
+            </dl>
+            <div class="btn-group btn-group-justified">
+              <a href="/concerts" class="btn btn-primary">
+                <i class="fa fa-chevron-left"></i>
+              </a>
+
+              <a href="/concerts/<%= @concert.id %>/edit" class="btn btn-warning">
+                <i class="fa fa-edit"></i>
+              </a>
+
+              <a href="/delete_concert/<%= @concert.id %>" class="btn btn-danger" rel="nofollow">
+                <i class="fa fa-trash-o"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- End responsive panel example -->
